@@ -13,6 +13,19 @@ function recipePull (parameters) {
 	$.get(appCall, function( result ) {
 		/* Pull values */
 		
+		/* Strings */
+		var label = 
+		var image = 
+		var calories = 
+		var totalWeight = 
+		var totalTime = 
+
+		/* Arrays */
+		var dietLabels = 
+		var healthLabels = 
+		var cautions = 
+		var ingredientLines = 
+		var ingredients = 
 
 		console.log("pulled");
 	}).done(function() {
