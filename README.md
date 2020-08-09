@@ -6,8 +6,7 @@ Taylor Johnson
 
 Project Title:
 
-5 Star Recipes
-FiveStarRecipes
+5StarRecipes
 
 Project Description:
 
@@ -17,7 +16,6 @@ User Story:
 
 I’m stuck in a pandemic and I don’t know what to cook. I need an app that will provide me with recipes I can make with what I have.
 
-Wireframe or sketch of design:
 
 APIs:
 
@@ -28,11 +26,5 @@ Tasty API: https://rapidapi.com/apidojo/api/tasty/pricing
 Recipe API: https://rapidapi.com/webknox/api/recipe?endpoint=53aa54e5e4b0a798dbd1a8c2
 MyCookbook: https://rapidapi.com/mycookbook/api/mycookbook-io1/endpoints
 
-Rough breakdown of tasks:
-
-Assign teams - front-end (Steph + Tay) back-end (Alex + Ralph)
-Look through APIs (Ralph + Alex)
-Website Design (Steph + Tay)
-Create branches (team)
 
 Additional Framework: Zurb Foundation
