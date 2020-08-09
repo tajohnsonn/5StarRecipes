@@ -17,9 +17,12 @@ User Story:
 
 I’m stuck in a pandemic and I don’t know what to cook. I need an app that will provide me with recipes I can make with what I have. 
 
+<<<<<<< HEAD
 Wireframe or sketch of design: 
 
 
+=======
+>>>>>>> 4a7e14338305a8139e573b8451d8ef12578aa120
 APIs: 
 
 TheMealDB: https://www.themealdb.com/api.php
@@ -29,6 +32,7 @@ Tasty API: https://rapidapi.com/apidojo/api/tasty/pricing
 Recipe API: https://rapidapi.com/webknox/api/recipe?endpoint=53aa54e5e4b0a798dbd1a8c2
 MyCookbook: https://rapidapi.com/mycookbook/api/mycookbook-io1/endpoints
 
+<<<<<<< HEAD
 Rough breakdown of tasks: 
 
 Assign teams - front-end (Steph + Tay) back-end (Alex + Ralph) 
@@ -38,3 +42,10 @@ Create branches (team)
 
 Additional Framework: Zurb Foundation
 
+=======
+
+
+Framework:
+
+Zurb Foundation
+>>>>>>> 4a7e14338305a8139e573b8451d8ef12578aa120
