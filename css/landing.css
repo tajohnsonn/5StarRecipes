@@ -9,7 +9,6 @@
 }
 
 body {
-  background: #444;
   overflow: hidden;
   height: 100vh;
   width: 100%;
@@ -21,23 +20,34 @@ a {
   text-decoration: none;
   color: currentColor;
 }
+/* Background Styling */
 
-/* Background Image Styling */
-
-body {
-  background-image: url("Images/food.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.background {
+  background: url(https://images.unsplash.com/photo-1556911073-38141963c9e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80)
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  width: 100% !important;
-  z-index: 0;
+  background-size: cover;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
 }
 
+.background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(240, 235, 235, 0.351);
+}
 /* Container Styling */
 
-.container {
+.row {
   position: relative;
   z-index: 1;
   height: 100vh;
@@ -48,18 +58,20 @@ body {
 /* Title Styling */
 .title {
   font-family: "Arimo", sans-serif;
-  color: #712c2a;
+  color: #974744;
   margin-top: 10%;
   margin-left: 5%;
   display: flex;
+  opacity: 1;
+  position: relative;
 }
 
 .star {
-  color: #996415;
+  color: #7d693d;
 }
 @media screen and (min-width: 601px) {
   .title {
-    font-size: 80px;
+    font-size: 100px;
     margin-top: 10%;
     margin-left: 5%;
   }
@@ -67,7 +79,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .title {
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 30%;
     margin-left: 5%;
   }
