@@ -25,13 +25,12 @@ a {
 /* Background Image Styling */
 
 body {
-  background: url(Assets/Images/Landing.png) no-repeat center center fixed;
+  background: url("Assets/Images/Landing.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-blend-mode: multiply;
-  background-color: #b5b5b5;
 }
 
 /* Container Styling */
