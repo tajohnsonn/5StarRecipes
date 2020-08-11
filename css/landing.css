@@ -1,0 +1,74 @@
+/*=========================================
+*            global attributes            *
+=========================================*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  color: #dfdfdf;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Background Image Styling */
+
+body {
+  background: url(Assets/Images/jason-briscoe-VfKK1PPoIBA-unsplash.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #b5b5b5;
+}
+
+/* Container Styling */
+
+.container {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Title Styling */
+.title {
+  font-family: "Arimo", sans-serif;
+  color: #712c2a;
+  margin-top: 10%;
+  margin-left: 5%;
+  display: flex;
+}
+
+.star {
+  color: #996415;
+}
+@media screen and (min-width: 601px) {
+  .title {
+    font-size: 80px;
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 50px;
+    margin-top: 30%;
+    margin-left: 5%;
+  }
+}

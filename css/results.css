@@ -1,0 +1,38 @@
+/*=========================================
+*            global attributes            *
+=========================================*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  color: #dfdfdf;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Background Image Styling */
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #d2d0d0;
+}
+
+.column {
+  background: url("Assets/Images/kobby-mendez-xBFTjrMIC0c-unsplash.jpg");
+}
