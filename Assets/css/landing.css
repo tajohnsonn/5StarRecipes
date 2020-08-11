@@ -25,8 +25,7 @@ a {
 /* Background Image Styling */
 
 body {
-  background: url(Assets/Images/jason-briscoe-VfKK1PPoIBA-unsplash.jpg)
-    no-repeat center center fixed;
+  background: url(Assets/Images/Landing.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
