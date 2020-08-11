@@ -1,23 +1,23 @@
 Team:
-Alex Blake 
-Ralph Anumba 
-Stephany Adela Lopez 
+Alex Blake
+Ralph Anumba
+Stephany Adela Lopez
 Taylor Johnson
 
-Project Title: 
+Project Title:
 
-5 Star Recipes 
-FiveStarRecipes
+5StarRecipes
 
-Project Description: 
+Project Description:
 
-The user is able to input ingredients into a field and generate recipes for cocktails and home cooked meals. 
+The user is able to input ingredients into a field and generate recipes for cocktails and home cooked meals.
 
-User Story: 
+User Story:
 
-I’m stuck in a pandemic and I don’t know what to cook. I need an app that will provide me with recipes I can make with what I have. 
+I’m stuck in a pandemic and I don’t know what to cook. I need an app that will provide me with recipes I can make with what I have.
 
-APIs: 
+
+APIs:
 
 TheMealDB: https://www.themealdb.com/api.php
 TheCocktailDB: https://www.thecocktaildb.com/api.php
@@ -27,7 +27,4 @@ Recipe API: https://rapidapi.com/webknox/api/recipe?endpoint=53aa54e5e4b0a798dbd
 MyCookbook: https://rapidapi.com/mycookbook/api/mycookbook-io1/endpoints
 
 
-
-Framework:
-
-Zurb Foundation
+Additional Framework: Zurb Foundation
