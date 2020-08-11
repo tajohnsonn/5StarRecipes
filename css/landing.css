@@ -25,12 +25,14 @@ a {
 /* Background Image Styling */
 
 body {
-  background: url("Assets/Images/Landing.png") no-repeat center center fixed;
+  background-image: url("Images/food.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-blend-mode: multiply;
+  width: 100% !important;
+  z-index: 0;
 }
 
 /* Container Styling */
