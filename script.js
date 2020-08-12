@@ -26,6 +26,22 @@ $(document).ready(function() {
 		recipePull(appQuery);
 	});
 
+	$(".submitBtn").click(function(event) {
+		event.preventDefault();
+		// var parent = $(this).parent().attr("id")
+		// var imageEl = $("#" + parent + " img").attr('src')
+		// var labelEl = $("#" + parent + " h2").html()
+		// var dietLabelsEl = $("#" + parent + " .dietLabels").html()
+		// var healthLabelEl = $("#" + parent + " .healthLabels ").html()
+		// var causionsEl = $("#" + parent + " .cautions").html()
+		// var ingredientLineslEl = $("#" + parent + " .ingredientLines").html()
+		// var ingredientsEl = $("#" + parent + " .ingredients").html()
+		
+		// console.log(imageEl)
+		console.log("food")
+	});
+
+
 	$("#alcoholFree").change(function(){
 		alcholFreeSelected= $(this).prop('checked');
    })
@@ -113,7 +129,7 @@ function recipePull (q) {
 			var ingredients = result.hits[i].recipe.ingredients
 
 			var recipeDiv =
-        "<div class='recipeCard'><img src='" +
+        "<div class='recipeCard' id = 'recipe"+ i +"'><img src='" +
         image +
         "'><h2>" +
         label +
@@ -126,8 +142,11 @@ function recipePull (q) {
         "</p><p class='ingredientLines'>" +
         parseList(ingredientLines, false) +
         "</p><p class='ingredients'>" +
-        parseList(ingredients, true) +
-        "</p></div>";
+		parseList(ingredients, true) +
+		"</p><input type = 'email'><button class='submitBtn'>Send</button></div>";
+
+
+		
 
 			$("#result").append(recipeDiv);
 		}
