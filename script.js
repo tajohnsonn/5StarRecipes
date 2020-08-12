@@ -7,7 +7,6 @@ var lowFatSelected=false;
 var peanutFreeSelected=false
 var veganSelected =false
 $(document).ready(function() {
-	
 
 	$(".imageSearch").click(function(event) {
 		var imageSearchVal = $(this).text();
@@ -26,21 +25,6 @@ $(document).ready(function() {
 		recipePull(appQuery);
 	});
 
-	$(".submitBtn").click(function(event) {
-		event.preventDefault();
-		// var parent = $(this).parent().attr("id")
-		// var imageEl = $("#" + parent + " img").attr('src')
-		// var labelEl = $("#" + parent + " h2").html()
-		// var dietLabelsEl = $("#" + parent + " .dietLabels").html()
-		// var healthLabelEl = $("#" + parent + " .healthLabels ").html()
-		// var causionsEl = $("#" + parent + " .cautions").html()
-		// var ingredientLineslEl = $("#" + parent + " .ingredientLines").html()
-		// var ingredientsEl = $("#" + parent + " .ingredients").html()
-		
-		// console.log(imageEl)
-		console.log("food")
-	});
-
 
 	$("#alcoholFree").change(function(){
 		alcholFreeSelected= $(this).prop('checked');
@@ -56,6 +40,58 @@ $(document).ready(function() {
 })
 
 });
+
+function sendEmail (recipeId) {
+		var imageEl = $("#recipe" + recipeId + "  img").attr('src')
+		var labelEl = $("#recipe" + recipeId + "  h2").html()
+		var dietLabelsEl = $("#recipe" + recipeId + " .dietLabels").html()
+		var healthLabelEl = $("#recipe" + recipeId + " .healthLabels ").html()
+		var causionsEl = $("#recipe" + recipeId + " .cautions").html()
+		var ingredientLineslEl = $("#recipe" + recipeId + " .ingredientLines").html()
+		var ingredientsEl = $("#recipe" + recipeId + " .ingredients").html()
+		var emailAddress = $("#recipe" + recipeId + " .myEmail").val()
+		// Grab Destination email
+		console.log(emailAddress)
+
+		// Generate HTML content
+		var to_email = emailAddress;
+		var reply_to_value = "alexblakela@gmail.com";
+		var from_name_value = "5 Star Recipes";
+		var to_name_value = "Guest";
+		var message_html_value = "test test test";
+		var subject_line = "Your " + labelEl + " Recipe Inside";
+
+		// Run API call
+		// code fragment
+		var data = {
+		    service_id: 'default_service',
+		    template_id: 'template_6Ahnf58T',
+		    user_id: 'user_0NQz8zbO39UFwf59ot2tg',
+		    template_params: {
+		    	"to_email": to_email,
+		    	"subject_line": subject_line,
+		    	   "reply_to": reply_to_value,
+				   "from_name": from_name_value,
+				   "to_name": to_name_value,
+				   "message_html": message_html_value
+		    }
+		};
+		 
+		$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+		    type: 'POST',
+		    data: JSON.stringify(data),
+		    contentType: 'application/json'
+		}).done(function() {
+		    alert('Your mail is sent!');
+
+		}).fail(function(error) {
+		    alert('Oops... ' + JSON.stringify(error));
+		});
+
+
+		// Display confirmation on page
+
+	};
 
 function localStor(searchTerm) {
 	/* Local Storage */
@@ -143,7 +179,7 @@ function recipePull (q) {
         parseList(ingredientLines, false) +
         "</p><p class='ingredients'>" +
 		parseList(ingredients, true) +
-		"</p><input type = 'email'><button class='submitBtn'>Send</button></div>";
+		"</p><form><input type='email' class='myEmail'><p type='submit' class='sendMe' onclick='sendEmail(" + i +")'>Test</p></div>";
 
 
 		
