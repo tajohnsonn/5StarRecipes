@@ -2,7 +2,12 @@
 /* FiveStarRecipes */
 
 /* Event Listener */
+var alcholFreeSelected=false;
+var lowFatSelected=false;
+var peanutFreeSelected=false
+var veganSelected =false
 $(document).ready(function() {
+	
 
 	$(".imageSearch").click(function(event) {
 		var imageSearchVal = $(this).text();
@@ -20,12 +25,26 @@ $(document).ready(function() {
 		localStor(appQuery);
 		recipePull(appQuery);
 	});
+
+	$("#alcoholFree").change(function(){
+		alcholFreeSelected= $(this).prop('checked');
+   })
+	$("#lowFat").change(function(){
+		 lowFatSelected= $(this).prop('checked');
+	})
+	$("#peanutFree").change(function(){
+		peanutFreeSelected= $(this).prop('checked');
+   })
+   $("#vegan").change(function(){
+		veganSelected= $(this).prop('checked');
+})
+
 });
 
 function localStor(searchTerm) {
 	/* Local Storage */
 	
-	localVar = localStorage.getItem("recipeSearches");
+	var localVar = localStorage.getItem("recipeSearches");
 	
 	if (localVar === null) {
 		var lovalVarArray = [];
@@ -39,7 +58,6 @@ function localStor(searchTerm) {
 	localStorage.setItem("recipeSearches", finalList);
 }
 
-
 /* Credentials */
 var appId = "5cf2449c";
 var appKey = "5cf1678b66b687897855b342ee20ede8";
@@ -47,13 +65,34 @@ var appUrl = "https://api.edamam.com/search?";
 
 /* API CALL */
 function recipePull (q) {
+	var appCall = appUrl + 
+			"app_id=" + appId + 
+			"&app_key=" + appKey + 
+			"&q=" + q
+			;
 	
-	var appCall = appUrl + "app_id=" + appId + "&app_key=" + appKey + "&q=" + q;
+			if (alcholFreeSelected){
+				appCall = appCall +
+				"&health=alcohol-free"
+			}
+			if (lowFatSelected){
+				appCall = appCall +
+				"&diet=low-fat"
+			}
+			if (peanutFreeSelected){
+				appCall = appCall +
+				"&health=peanut-free"
+			}
+			if (veganSelected){
+				appCall = appCall +
+				"&health=vegan"
+			}
+			
 
 	console.log(appCall);
 	$.get(appCall, function( result ) {
 		/* Pull values */
-		
+		$("#result").empty()
 		for (var i = 0; i < result.hits.length; i++) {
 
 			console.log ("result.hits.length -- " + result.hits.length);
@@ -73,7 +112,22 @@ function recipePull (q) {
 			var ingredientLines = result.hits[i].recipe.ingredientLines
 			var ingredients = result.hits[i].recipe.ingredients
 
-			var recipeDiv = "<div class='recipeCard'><img src='" + image +"'><h2>" + label +"</h2><p class='dietLabels'>" + parseList(dietLabels, false) +"</p><p class='healthLabels'>" + parseList(healthLabels, false) +"</p><p class='cautions'>" + parseList(cautions, false) +"</p><p class='ingredientLines'>" +parseList(ingredientLines, false)  +"</p><p class='ingredients'>" + parseList(ingredients, true) +"</p></div>";
+			var recipeDiv =
+        "<div class='recipeCard'><img src='" +
+        image +
+        "'><h2>" +
+        label +
+        "</h2><p class='dietLabels'>" +
+        parseList(dietLabels, false) +
+        "</p><p class='healthLabels'>" +
+        parseList(healthLabels, false) +
+        "</p><p class='cautions'>" +
+        parseList(cautions, false) +
+        "</p><p class='ingredientLines'>" +
+        parseList(ingredientLines, false) +
+        "</p><p class='ingredients'>" +
+        parseList(ingredients, true) +
+        "</p></div>";
 
 			$("#result").append(recipeDiv);
 		}
@@ -95,3 +149,4 @@ function recipePull (q) {
 		}
 	});
 }
+
