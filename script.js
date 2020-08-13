@@ -41,24 +41,23 @@ $(document).ready(function() {
 
 });
 
-function sendEmail (recipeId) {
-		var imageEl = $("#recipe" + recipeId + "  img").attr('src')
+function sendEmail (recipeId,emailAddress) {
+	
+		
 		var labelEl = $("#recipe" + recipeId + "  h2").html()
-		var dietLabelsEl = $("#recipe" + recipeId + " .dietLabels").html()
-		var healthLabelEl = $("#recipe" + recipeId + " .healthLabels ").html()
-		var causionsEl = $("#recipe" + recipeId + " .cautions").html()
-		var ingredientLineslEl = $("#recipe" + recipeId + " .ingredientLines").html()
-		var ingredientsEl = $("#recipe" + recipeId + " .ingredients").html()
-		var emailAddress = $("#recipe" + recipeId + " .myEmail").val()
-		// Grab Destination email
-		console.log(emailAddress)
+		var msgEl=$('#emailMessage'+ recipeId);
+		msgEl.text('');
+
+		var htmlBody="<div>"+
+		$("#recipe" + recipeId ).html()+
+		"</div>";
 
 		// Generate HTML content
 		var to_email = emailAddress;
 		var reply_to_value = "alexblakela@gmail.com";
 		var from_name_value = "5 Star Recipes";
 		var to_name_value = "Guest";
-		var message_html_value = "test test test";
+		var message_html_value = htmlBody;
 		var subject_line = "Your " + labelEl + " Recipe Inside";
 
 		// Run API call
@@ -82,10 +81,13 @@ function sendEmail (recipeId) {
 		    data: JSON.stringify(data),
 		    contentType: 'application/json'
 		}).done(function() {
-		    alert('Your mail is sent!');
+			// alert('Your mail is sent!');
+			msgEl.text('Your mail is sent!');
 
 		}).fail(function(error) {
-		    alert('Oops... ' + JSON.stringify(error));
+			// alert('Oops... ' + JSON.stringify(error));
+			msgEl.text('Oops... ' + JSON.stringify(error));
+			
 		});
 
 
@@ -122,7 +124,7 @@ function recipePull (q) {
 			"&app_key=" + appKey + 
 			"&q=" + q
 			;
-	
+			
 			if (alcholFreeSelected){
 				appCall = appCall +
 				"&health=alcohol-free"
@@ -165,26 +167,38 @@ function recipePull (q) {
 			var ingredients = result.hits[i].recipe.ingredients
 
 			var recipeDiv =
-        "<div class='recipeCard' id = 'recipe"+ i +"'><img src='" +
-        image +
-        "'><h2>" +
-        label +
-        "</h2><p class='dietLabels'>" +
-        parseList(dietLabels, false) +
-        "</p><p class='healthLabels'>" +
-        parseList(healthLabels, false) +
-        "</p><p class='cautions'>" +
-        parseList(cautions, false) +
-        "</p><p class='ingredientLines'>" +
-        parseList(ingredientLines, false) +
-        "</p><p class='ingredients'>" +
-		parseList(ingredients, true) +
-		"</p><form><input type='email' class='myEmail'><p type='submit' class='sendMe' onclick='sendEmail(" + i +")'>Test</p></div>";
+		"<div class='recipeCard' id = 'recipe"+ i +"'>"+
+		"<img src='" +image + "'/>"+
+		"<h2>" +label +"</h2>"+
+		"<p class='dietLabels'>" +
+        	parseList(dietLabels, false) +
+		"</p>"+
+		"<p class='healthLabels'>" +
+       		 parseList(healthLabels, false) +
+		"</p>"+
+		"<p class='cautions'>" +
+        	parseList(cautions, false) +
+		"</p>"+
+ 		"<p class='ingredientLines'>" +
+        	parseList(ingredientLines, false) +
+		"</p>"+
+		"</div>";
+
+var form="<div id='emailMessage"+i+"'></div>"+
+		"<input id='emailInp"+i+"' type='email' class='myEmail'>"+
+		  "<button id='emailBtn"+i+"' type='submit' class='sendMe' value='"+i+"'>Send</button><br>"
 
 
-		
+			$("#result").append(recipeDiv+form);
 
-			$("#result").append(recipeDiv);
+			$("#emailBtn"+i).on('click',function(event){
+				event.preventDefault();
+				var item=$(this).val();
+				var email=$("#emailInp"+item).val();
+				
+				sendEmail(item,email)
+			})
+
 		}
 		
 		function parseList(foodList,multi ){
@@ -204,4 +218,5 @@ function recipePull (q) {
 		}
 	});
 }
+
 
