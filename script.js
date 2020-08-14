@@ -48,7 +48,7 @@ function sendEmail (recipeId,emailAddress) {
 		var msgEl=$('#emailMessage'+ recipeId);
 		msgEl.text('');
 
-		var htmlBody="<div>"+
+		var htmlBody="<div><img src='Assets/Images/email-header.png'><br><hr><br>"+
 		$("#recipe" + recipeId ).html()+
 		"</div>";
 
