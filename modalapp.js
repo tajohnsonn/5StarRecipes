@@ -4,7 +4,7 @@ $(document).ready(function () {
   var button = $("#recipeCard");
   var contentModal = $("#recipeIngredientCard");
   var closeModalBtn = $(".modal-close");
-
+  // history
   button.on("click", function () {
     console.log("Open");
 
