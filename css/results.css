@@ -24,6 +24,18 @@ a {
 
 /* Background Image Styling */
 
+.home {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(116, 115, 115);
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  display: block;
+}
+
+/* Background Image Styling */
+
 body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -33,7 +45,7 @@ body {
   background-color: #d2d0d0;
 }
 
-.column {
+.banner {
   background: url("https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   display: block;
   height: 150px;
@@ -45,12 +57,13 @@ body {
 }
 
 .tile {
-  font-family: "Roboto Slab", serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .checkbox {
   font-family: "Roboto", sans-serif;
   text-align: left;
+  margin-top: 10px;
 }
 
 .is-child {
@@ -70,7 +83,7 @@ body {
   margin-top: 30%;
 }
 
-.is-rounded {
+.search {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -78,4 +91,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: "Roboto", sans-serif;
+  margin-top: 5%;
+  background-color: rgb(116, 115, 115);
+  color: white;
 }
