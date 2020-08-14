@@ -34,7 +34,7 @@ a {
   display: block;
 }
 
-/* Background Image Styling */
+/* Background Styling */
 
 body {
   -webkit-background-size: cover;
@@ -44,6 +44,7 @@ body {
   background-blend-mode: multiply;
   background-color: #d2d0d0;
 }
+/* Banner Styling */
 
 .banner {
   background: url("https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -55,15 +56,20 @@ body {
   margin-top: 7%;
   margin-bottom: 4%;
 }
+/* Content Styling */
 
 .tile {
   font-family: "PT Sans", sans-serif;
 }
 
+.control {
+  margin-bottom: 2%;
+}
 .checkbox {
   font-family: "Roboto", sans-serif;
   text-align: left;
   margin-top: 10px;
+  align-content: space-around;
 }
 
 .is-child {
@@ -75,23 +81,22 @@ body {
   margin-right: 30px;
 }
 
-.control {
-  margin-bottom: 2%;
+/* Container Media Queries */
+
+@media screen and (min-width: 500px) {
+  .is-child {
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .is-child {
+    margin-top: 30%;
+    margin-left: 5%;
+  }
 }
 
 .history {
   margin-top: 30%;
-}
-
-.search {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-family: "Roboto", sans-serif;
-  margin-top: 5%;
-  background-color: rgb(116, 115, 115);
-  color: white;
 }
