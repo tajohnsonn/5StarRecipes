@@ -23,8 +23,7 @@ a {
 /* Background Styling */
 
 .background {
-  background: url(https://images.unsplash.com/photo-1556911073-a517e752729c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
-    no-repeat center center fixed;
+  background: url(../Images/Landing.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
