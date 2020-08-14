@@ -6,7 +6,7 @@ $(document).ready(function () {
   var closeModalBtn = $(".modal-close");
 
   button.on("click", function () {
-    console.log("button");
+    console.log("Open");
 
     contentModal.css({ display: "block" });
   });
@@ -16,11 +16,13 @@ $(document).ready(function () {
     contentModal.css({ display: "none" });
   });
 
-  $(window).on("click", function (event) {
-    console.log(event);
+  $(window).click(function (event) {
+    var tar = $(event.target).attr("class");
+    // var tar = $(event[(target = "div.modal-background")]);
 
-    // if ((EventTarget.is = $("div.modal-background"))) {
-    //   contentModal.css({ display: "none" });
-    // }
+    if (tar == "modal-background") {
+      // console.log("Hi Im BG");
+      contentModal.css({ display: "none" });
+    }
   });
 });
