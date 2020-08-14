@@ -81,6 +81,18 @@ body {
   margin-right: 30px;
 }
 
+/* Search Button Styling */
+
+.search {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(116, 115, 115);
+  color: white;
+}
+
+.history {
+  margin-top: 30%;
+}
+
 /* Container Media Queries */
 
 @media screen and (min-width: 500px) {
@@ -95,8 +107,4 @@ body {
     margin-top: 30%;
     margin-left: 5%;
   }
-}
-
-.history {
-  margin-top: 30%;
 }
