@@ -159,19 +159,36 @@ function recipePull(q) {
         "<h2>" +
         label +
         "</h2>" +
-        "<p class='hideme dietLabels'>" +
-        parseList(dietLabels, false) +
-        "</p>" +
-        "<p class='hideme healthLabels'>" +
-        parseList(healthLabels, false) +
-        "</p>" +
-        "<p class='hideme cautions'>" +
-        parseList(cautions, false) +
-        "</p>" +
-        "<p class='hideme ingredientLines'>" +
-        parseList(ingredientLines, false) +
-        "</p>" +
+        parseList(dietLabels, false, "dietLabels") +
+        parseList(healthLabels, false, "healthLabels") +
+        parseList(cautions, false, "cautions") +
+        parseList(ingredientLines, false, "ingredientLines") +
         "</div>";
+
+        // "<div class='recipeCard' id = 'recipe" +
+        // i +
+        // "'>" +
+        // "<img src='" +
+        // image +
+        // "'/>" +
+        // "<h2>" +
+        // label +
+        // "</h2>" +
+        // "<p class='hideme dietLabels'>" +
+        // parseList(dietLabels, false) +
+        // "</p>" +
+        // "<p class='hideme healthLabels'>" +
+        // parseList(healthLabels, false) +
+        // "</p>" +
+        // "<p class='hideme cautions'>" +
+        // parseList(cautions, false) +
+        // "</p>" +
+        // "<p class='hideme ingredientLines'>" +
+        // parseList(ingredientLines, false) +
+        // "</p>" +
+        // "</div>";
+
+
 
       var form =
         "<div id='emailMessage" +
@@ -197,8 +214,8 @@ function recipePull(q) {
       });
     }
 
-    function parseList(foodList, multi) {
-      var holder = "<ul class='hideme'>";
+    function parseList(foodList, multi, className) {
+      var holder = "<ul class='hideme " + className + "'>";
 
       for (var index = 0; index < foodList.length; index++) {
         if (multi === false) {
