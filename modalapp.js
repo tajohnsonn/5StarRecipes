@@ -1,12 +1,12 @@
 // console.log("ghfvdsobytrfde");
 
 $(document).ready(function () {
-  var button = $("#recipeCard");
+  // var button = $(".recipeCard");
   var contentModal = $("#recipeIngredientCard");
   var closeModalBtn = $(".modal-close");
-  // history
-  button.on("click", function () {
-    console.log("Open");
+  $("body").on("click", ".recipeCard", function () {
+    // do something
+    console.log("Yo");
 
     contentModal.css({ display: "block" });
   });
