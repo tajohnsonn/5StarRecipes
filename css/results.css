@@ -34,7 +34,11 @@ a {
   display: block;
 }
 
+<<<<<<< HEAD
 /* Background Image Styling */
+=======
+/* Background Styling */
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 
 body {
   -webkit-background-size: cover;
@@ -44,6 +48,10 @@ body {
   background-blend-mode: multiply;
   background-color: #d2d0d0;
 }
+<<<<<<< HEAD
+=======
+/* Banner Styling */
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 
 .banner {
   background: url("https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
@@ -55,15 +63,29 @@ body {
   margin-top: 7%;
   margin-bottom: 4%;
 }
+<<<<<<< HEAD
+=======
+/* Content Styling */
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 
 .tile {
   font-family: "PT Sans", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+.control {
+  margin-bottom: 2%;
+}
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 .checkbox {
   font-family: "Roboto", sans-serif;
   text-align: left;
   margin-top: 10px;
+<<<<<<< HEAD
+=======
+  align-content: space-around;
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 }
 
 .is-child {
@@ -75,14 +97,24 @@ body {
   margin-right: 30px;
 }
 
+<<<<<<< HEAD
 .control {
   margin-bottom: 2%;
+=======
+/* Search Button Styling */
+
+.search {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(116, 115, 115);
+  color: white;
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 }
 
 .history {
   margin-top: 30%;
 }
 
+<<<<<<< HEAD
 .search {
   margin: 0;
   position: absolute;
@@ -94,4 +126,20 @@ body {
   margin-top: 5%;
   background-color: rgb(116, 115, 115);
   color: white;
+=======
+/* Container Media Queries */
+
+@media screen and (min-width: 500px) {
+  .is-child {
+    margin-top: 10%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .is-child {
+    margin-top: 30%;
+    margin-left: 5%;
+  }
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 }

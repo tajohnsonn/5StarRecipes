@@ -23,8 +23,12 @@ a {
 /* Background Styling */
 
 .background {
+<<<<<<< HEAD
   background: url(https://images.unsplash.com/photo-1556911073-a517e752729c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
     no-repeat center center fixed;
+=======
+  background: url(../Images/Landing.png) no-repeat center center fixed;
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,6 +72,30 @@ a {
 .star {
   color: #7d693d;
 }
+<<<<<<< HEAD
+=======
+#search-bar {
+  max-width: 500px;
+  margin: 110px auto 10px auto;
+  font-size: 32px;
+  padding: 40px;
+}
+.width-100 {
+  width: 100%;
+  text-align: center;
+}
+#button-search {
+  font-weight: bold;
+  color: #FFF;
+  padding: 10px 20px;
+  border: solid 1px orange;
+  display: inline-block;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #b25400;
+  font-size: 42px;
+}
+>>>>>>> 3498111b3ce07f8c9e85738513df2a3ebae8be68
 @media screen and (min-width: 601px) {
   .title {
     font-size: 100px;
