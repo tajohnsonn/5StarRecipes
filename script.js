@@ -13,7 +13,15 @@ $(document).ready(function () {
     recipePull(imageSearchVal);
     localStor(imageSearchVal);
   });
-
+  var queryString = window.location.search;
+  console.log(queryString);
+  var urlParams = new URLSearchParams(queryString);
+  var searchUrl = urlParams.get('search')
+  console.log(searchUrl);
+  if (searchUrl!== ""){
+    localStor(searchUrl);
+    recipePull( searchUrl);
+  }
   $("#search").click(function (event) {
     event.preventDefault();
 
@@ -22,6 +30,16 @@ $(document).ready(function () {
     /* Run API Call */
     localStor(appQuery);
     recipePull(appQuery);
+  }); 
+  
+
+$("body").on("click", ".localItem", function (){
+  var appQuery = $(this).text();
+  /* Run API Call */
+  localStor(appQuery);
+  recipePull(appQuery);
+
+    
   });
 
   $("#alcoholFree").change(function () {
@@ -98,12 +116,21 @@ function localStor(searchTerm) {
     var lovalVarArray = [];
   } else {
     var lovalVarArray = JSON.parse(localVar);
+
   }
 
   console.log(lovalVarArray);
   lovalVarArray.push(searchTerm);
   finalList = JSON.stringify(lovalVarArray);
   localStorage.setItem("recipeSearches", finalList);
+  var localArray = JSON.parse(localVar)
+  $("#localStorage").html("")
+
+  for (var index = 0; index < localArray.length; index++) {
+  var localItem = "<p class = 'localItem'>" + localArray[index] + "</p>"
+    $("#localStorage").append(localItem)
+  
+  }
 }
 
 /* Credentials */
