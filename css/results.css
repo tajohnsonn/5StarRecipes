@@ -21,9 +21,22 @@ a {
 /* Background Image Styling */
 .home {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(116, 115, 115);
+  background-color: rgb(146, 144, 144);
   color: white;
-  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    font-size: 100px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    font-size: 100px;
+    width: 100%;
+  }
 }
 .hero {
   height: 30px;
@@ -64,6 +77,7 @@ body {
 #detailsTitle {
   font-size: 40px;
   color: #974744;
+  font-weight: bolder;
 }
 .control {
   margin-bottom: 2%;
@@ -81,6 +95,29 @@ body {
 .is-parent {
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.column-left {
+  width: 100%;
+}
+
+.column-right {
+  width: 100%;
+}
+@media screen and (min-width: 601px) {
+  .column-left {
+    font-size: 100px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column-right {
+    font-size: 100px;
+    width: 100%;
+  }
+}
+.recipe-title {
+  font-weight: 900;
 }
 /* Search Button Styling */
 .search {
