@@ -90,6 +90,10 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
 }
+#recipe-search-title {
+  font-size: 40px;
+  color: #974744;
+}
 #recipeTitle {
   font-size: 50px;
   color: #974744;
@@ -129,7 +133,8 @@ body {
   font-size: 100px;
   min-width: 380px;
 }
-.input, .textarea {
+.input,
+.textarea {
   color: #000;
 }
 .column-left ul {
