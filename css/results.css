@@ -72,6 +72,10 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
 }
+#recipe-search-title {
+  font-size: 40px;
+  color: #974744;
+}
 #recipeTitle {
   font-size: 50px;
   color: #974744;
@@ -111,7 +115,8 @@ body {
   font-size: 100px;
   min-width: 380px;
 }
-.input, .textarea {
+.input,
+.textarea {
   color: #000;
 }
 .column-left ul {
@@ -125,10 +130,18 @@ body {
   height: 17px;
 }
 
+<<<<<<< HEAD
+@media screen and (max-width: 600px) {
+  .column-right {
+    font-size: 100px;
+    width: 100%;
+  }
+=======
 .localItem{
   border: solid black 1px;
   padding: 5px 10px;
   margin: 5px auto;
+>>>>>>> 0fb13c413386066fc908f5e986dafd1e69f0d5e0
 }
 
 .recipe-title {
