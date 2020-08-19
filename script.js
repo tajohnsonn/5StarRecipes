@@ -203,14 +203,17 @@ function recipePull(q) {
       // $("#result").append(recipeDiv + form);
       $("#result").append(recipeDiv);
 
-      $("#emailBtn" + i).on("click", function (event) {
-        event.preventDefault();
-        var item = $(this).val();
-        var email = $("#emailInp" + item).val();
-
-        sendEmail(item, email);
-      });
+    
     }
+    $("#emailBtn").on("click", function (event) {
+      console.log("email")
+      event.preventDefault();
+      var item = $(this).val();
+      var email = $(".modal-card-body").html();
+    
+
+      sendEmail(item, email);
+    });
 
     function parseList(foodList, multi, className) {
       var holder = "<ul class='hideme " + className + "'>";
