@@ -33,7 +33,7 @@
             type="text"
             id="search-bar"
             name="landing-search"
-            value="Search for recipe..."
+            placeholder="Search for recipe..."
           />
           <div class="width-100">
             <button id="button-search" class="btn_nav">SEARCH</button>
@@ -43,7 +43,7 @@
     </div>
   </body>
   <script type="text/javascript">
-    $("#button-search").click(function(event) {
+    $("#button-search").click(function (event) {
       var search = $("#search-bar").val();
       window.location.href = "results.html?search=" + search;
     });
