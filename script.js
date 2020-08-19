@@ -7,6 +7,17 @@ var lowFatSelected = false;
 var peanutFreeSelected = false;
 var veganSelected = false;
 $(document).ready(function () {
+  $("#emailBtn").on("click", function (event) {
+    event.preventDefault();
+    var item = 0;
+    console.log("ITEM" + item);
+    var email = $("#emailInp").val();
+    var recipeID = $("#placeholderRecipe").val();
+    var recipeNumber = recipeID.replace("recipe", "");
+    console.log("ID:" + recipeNumber);
+    sendEmail(recipeNumber, email);
+  });
+
   $(".imageSearch").click(function (event) {
     var imageSearchVal = $(this).text();
     console.log(imageSearchVal);
@@ -51,7 +62,6 @@ $(document).ready(function () {
   $("#vegan").change(function () {
     veganSelected = $(this).prop("checked");
   });
-});
 
 function sendEmail(recipeId, emailAddress) {
   var labelEl = $("#recipe" + recipeId + "  h2").html();
@@ -102,7 +112,10 @@ function sendEmail(recipeId, emailAddress) {
     });
 
   // Display confirmation on page
-}
+}  
+});
+
+
 
 function localStor(searchTerm) {
   /* Local Storage */
@@ -205,15 +218,6 @@ function recipePull(q) {
 
     
     }
-    $("#emailBtn").on("click", function (event) {
-      console.log("email")
-      event.preventDefault();
-      var item = $(this).val();
-      var email = $(".modal-card-body").html();
-    
-
-      sendEmail(item, email);
-    });
 
     function parseList(foodList, multi, className) {
       var holder = "<ul class='hideme " + className + "'>";

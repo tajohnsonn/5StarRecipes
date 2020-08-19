@@ -11,7 +11,9 @@ $(document).ready(function () {
     recipeID = $(this).attr("id");
     console.log("recipeID " + recipeID);
     recID = recipeID.replace("recipe", "");
+    $("#placeholderRecipe").val(recipeID);
     populateModal(recID);
+
 
     contentModal.css({ display: "block" });
   });
