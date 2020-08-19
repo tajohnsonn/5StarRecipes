@@ -20,14 +20,12 @@
 </head>
 <body>
     <!-- Home Button-->
-    <section class="hero">
-        <div class="hero-body">
-          <p><a href="landing.html">
-            <img src="Images/logo.png" alt="Logo" width="200" height="200">
-            </a></p>
+    <section>
+      <div class="banner">
+        <a href="landing.html"><img src="Images/logo.png"></a>
       </div>
-        </section>
-  <div class="banner"></div>
+    </section>
+  
   <!-- Left Side -->
   <div class="columns">
       <div class="column-left is-two-thirds">
@@ -35,28 +33,32 @@
             <div class="tile is-ancestor">
                 <div class="tile is-parent">
                   <article class="tile is-child box">
-                    <p class="title" id="recipeTitle">Recipe Search </p>
+                    <p class="title">Recipe Search</p>
                     <div class="field"> </div>
                       <div class="control">
                         <input id="searchbar" class="input" type="text" placeholder="Search for recipe by ingredient...">
                       </div>
                       <div class="control">
-                        <ul><label class="checkbox">
-                          <input id="vegan" type="checkbox">
-                          Vegan
-                        </label> </ul>
-                        <ul><label class="checkbox">
-                          <input id="lowFat" type="checkbox">
-                          Low Fat
-                        </label> </ul>
-                        <ul> <label class="checkbox">
-                          <input id="peanutFree" type="checkbox">
-                          Peanut-Free
-                        </label> </ul>
-                        <ul> <label class="checkbox">
-                          <input id="alcoholFree" type="checkbox">
-                          Alcohol-Free
-                        </label> </ul>
+                        <ul>
+                          <li>
+                            <label class="checkbox">
+                            <input id="vegan" type="checkbox">Vegan</label>
+                          </li>
+                          <li>
+                            <label class="checkbox">
+                              <input id="lowFat" type="checkbox">Low Fat</label>
+                          </li>
+                        </ul>
+                        <ul>
+                          <li>
+                            <label class="checkbox">
+                              <input id="peanutFree" type="checkbox">Peanut-Free</label>
+                            </li>
+                          <li>
+                            <label class="checkbox">
+                              <input id="alcoholFree" type="checkbox">Alcohol-Free</label>
+                          </li>
+                        </ul>                        
                         <button id="search" class="button search is-medium">Search</button>
                         <p class="title history" id="historyTitle">Past Results </p>
                         <div id="localStorage"></div>
