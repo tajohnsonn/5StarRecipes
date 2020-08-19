@@ -1,6 +1,24 @@
 /*=========================================
 *            global attributes            *
 =========================================*/
+.dietLabels ul, .dietLabels li, .healthLabels ul, .healthLabels li, .cautions ul, .cautions li {
+  list-style-type: none;
+  margin: 5px 10px;
+  font-size: 14px;
+  padding: 3px 6px;
+  background-color: hotpink;
+  border: 1px dashed red;
+  color: white;
+  display: inline-block;
+  
+}
+
+.modal-card .ingredientLines li, .modal-card .ingredientLines ul{
+  list-style-type: none;
+  margin: 5px 10px;
+
+}
+
 
 *,
 *::after,
@@ -83,7 +101,7 @@ body {
 #historyTitle {
   font-size: 50px;
   color: #974744;
-  border;
+  
 }
 #detailsTitle {
   font-size: 40px;
@@ -130,18 +148,10 @@ body {
   height: 17px;
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 600px) {
-  .column-right {
-    font-size: 100px;
-    width: 100%;
-  }
-=======
 .localItem{
   border: solid black 1px;
   padding: 5px 10px;
   margin: 5px auto;
->>>>>>> 0fb13c413386066fc908f5e986dafd1e69f0d5e0
 }
 
 .recipe-title {
@@ -178,7 +188,18 @@ body {
   color: brown;
   font-size: 35px;}
 
+.modal-card-body img{
+  float: left;
+  margin: 0 10px 10px 0;
+  border-radius: 25%;
+  border: 3px black dotted;
+  
 
+}
+.modal-card {
+  width:80%;
+
+}
 
 
 

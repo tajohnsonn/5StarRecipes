@@ -39,7 +39,7 @@ $(document).ready(function () {
       var dietLabels = $("#recipe" + id + " .dietLabels").html();
       var healthLabels = $("#recipe" + id + " .healthLabels").html();
       var cautions = $("#recipe" + id + " .cautions").html();
-      var ingredientLines = $("#recipe" + id + " .ingredientLines").text();
+      var ingredientLines = $("#recipe" + id + " .ingredientLines").html();
       // var ingredients = $("#recipe" + id + " .ingredients").html();
 
       $("#recipeTitle").text(label);
