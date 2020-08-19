@@ -79,6 +79,7 @@ body {
 #historyTitle {
   font-size: 50px;
   color: #974744;
+  border;
 }
 #detailsTitle {
   font-size: 40px;
@@ -124,16 +125,12 @@ body {
   height: 17px;
 }
 
-
-
-
-
-@media screen and (max-width: 600px) {
-  .column-right {
-    font-size: 100px;
-    width: 100%;
-  }
+.localItem{
+  border: solid black 1px;
+  padding: 5px 10px;
+  margin: 5px auto;
 }
+
 .recipe-title {
   font-weight: 900;
 }
@@ -153,4 +150,28 @@ body {
 }
 .hideme {
   display: none;
+}
+.recipeCard{
+  max-width: 49%;
+  display: inline-block;
+  min-height: 500px;
+  vertical-align: top;
+  padding-right: 30px;
+
+}
+.recipeCard h2{
+  max-width: 300px;
+  text-align: center;
+  color: brown;
+  font-size: 35px;}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .column-right {
+    font-size: 100px;
+    width: 100%;
+  }
 }
