@@ -16,11 +16,11 @@ $(document).ready(function () {
   var queryString = window.location.search;
   console.log(queryString);
   var urlParams = new URLSearchParams(queryString);
-  var searchUrl = urlParams.get('search')
+  var searchUrl = urlParams.get("search");
   console.log(searchUrl);
-  if (searchUrl!== ""){
+  if (searchUrl !== "") {
     localStor(searchUrl);
-    recipePull( searchUrl);
+    recipePull(searchUrl);
   }
   $("#search").click(function (event) {
     event.preventDefault();
@@ -30,15 +30,14 @@ $(document).ready(function () {
     /* Run API Call */
     localStor(appQuery);
     recipePull(appQuery);
-  }); 
-  
+  });
 
-$("body").on("click", ".localItem", function (){
-  var appQuery = $(this).text();
-  /* Run API Call */
-  localStor(appQuery);
-  recipePull(appQuery);
-});
+  $("body").on("click", ".localItem", function () {
+    var appQuery = $(this).text();
+    /* Run API Call */
+    localStor(appQuery);
+    recipePull(appQuery);
+  });
 
   $("#alcoholFree").change(function () {
     alcholFreeSelected = $(this).prop("checked");
@@ -114,20 +113,18 @@ function localStor(searchTerm) {
     var lovalVarArray = [];
   } else {
     var lovalVarArray = JSON.parse(localVar);
-
   }
 
   console.log(lovalVarArray);
   lovalVarArray.push(searchTerm);
   finalList = JSON.stringify(lovalVarArray);
   localStorage.setItem("recipeSearches", finalList);
-  var localArray = JSON.parse(localVar)
-  $("#localStorage").html("")
+  var localArray = JSON.parse(localVar);
+  $("#localStorage").html("");
 
   for (var index = 0; index < localArray.length; index++) {
-  var localItem = "<p class = 'localItem'>" + localArray[index] + "</p>"
-    $("#localStorage").append(localItem)
-  
+    var localItem = "<p class = 'localItem'>" + localArray[index] + "</p>";
+    $("#localStorage").append(localItem);
   }
 }
 
@@ -189,7 +186,7 @@ function recipePull(q) {
         parseList(cautions, false, "cautions") +
         parseList(ingredientLines, false, "ingredientLines") +
         "</div>";
-        
+
       var form =
         "<div id='emailMessage" +
         i +
@@ -203,7 +200,8 @@ function recipePull(q) {
         i +
         "'>Send</button><br>";
 
-      $("#result").append(recipeDiv + form);
+      // $("#result").append(recipeDiv + form);
+      $("#result").append(recipeDiv);
 
       $("#emailBtn" + i).on("click", function (event) {
         event.preventDefault();
