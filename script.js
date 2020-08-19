@@ -38,9 +38,7 @@ $("body").on("click", ".localItem", function (){
   /* Run API Call */
   localStor(appQuery);
   recipePull(appQuery);
-
-    
-  });
+});
 
   $("#alcoholFree").change(function () {
     alcholFreeSelected = $(this).prop("checked");
@@ -191,32 +189,7 @@ function recipePull(q) {
         parseList(cautions, false, "cautions") +
         parseList(ingredientLines, false, "ingredientLines") +
         "</div>";
-
-        // "<div class='recipeCard' id = 'recipe" +
-        // i +
-        // "'>" +
-        // "<img src='" +
-        // image +
-        // "'/>" +
-        // "<h2>" +
-        // label +
-        // "</h2>" +
-        // "<p class='hideme dietLabels'>" +
-        // parseList(dietLabels, false) +
-        // "</p>" +
-        // "<p class='hideme healthLabels'>" +
-        // parseList(healthLabels, false) +
-        // "</p>" +
-        // "<p class='hideme cautions'>" +
-        // parseList(cautions, false) +
-        // "</p>" +
-        // "<p class='hideme ingredientLines'>" +
-        // parseList(ingredientLines, false) +
-        // "</p>" +
-        // "</div>";
-
-
-
+        
       var form =
         "<div id='emailMessage" +
         i +
@@ -243,7 +216,6 @@ function recipePull(q) {
 
     function parseList(foodList, multi, className) {
       var holder = "<ul class='hideme " + className + "'>";
-
       for (var index = 0; index < foodList.length; index++) {
         if (multi === false) {
           holder += "<li>" + foodList[index] + "</li>";
@@ -251,7 +223,6 @@ function recipePull(q) {
           holder += "<li>" + foodList[index].text + "</li>";
         }
       }
-
       holder += "</ul>";
       return holder;
     }
