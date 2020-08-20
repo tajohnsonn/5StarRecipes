@@ -6,6 +6,9 @@ var alcholFreeSelected = false;
 var lowFatSelected = false;
 var peanutFreeSelected = false;
 var veganSelected = false;
+
+var lovalVarArray = [];
+
 $(document).ready(function () {
   $("#emailBtn").on("click", function (event) {
     event.preventDefault();
@@ -29,7 +32,7 @@ $(document).ready(function () {
   var urlParams = new URLSearchParams(queryString);
   var searchUrl = urlParams.get("search");
   console.log(searchUrl);
-  if (searchUrl !== "") {
+  if (searchUrl !== null) {
     localStor(searchUrl);
     recipePull(searchUrl);
   }
@@ -127,14 +130,16 @@ function localStor(searchTerm) {
   } else {
     var lovalVarArray = JSON.parse(localVar);
   }
-
   console.log(lovalVarArray);
   lovalVarArray.push(searchTerm);
   finalList = JSON.stringify(lovalVarArray);
   localStorage.setItem("recipeSearches", finalList);
-  var localArray = JSON.parse(localVar);
-  $("#localStorage").html("");
+  var localVar2 = localStorage.getItem("recipeSearches");
+  var localArray = JSON.parse(localVar2);
 
+  console.log("localVar length is " + localArray.length);
+
+  $("#localStorage").html("");
   for (var index = 0; index < localArray.length; index++) {
     var localItem = "<p class = 'localItem'>" + localArray[index] + "</p>";
     $("#localStorage").append(localItem);
