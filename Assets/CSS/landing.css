@@ -1,0 +1,105 @@
+/*=========================================
+*            global attributes            *
+=========================================*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  color: #dfdfdf;
+  font-family: "Bebas Neue";
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+/* Background Styling */
+
+.background {
+  background: url(../Images/Landing.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(240, 235, 235, 0.351);
+}
+/* Container Styling */
+
+.row {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Title Styling */
+.title {
+  font-size: 100px;
+  margin-top: 10%;
+  font-family: "Roboto", sans-serif;
+  color: #974744;
+  width: 100%;
+  text-align: center;
+}
+
+.star {
+  color: #7d693d;
+}
+#search-bar {
+  max-width: 500px;
+  margin: 110px auto 10px auto;
+  font-size: 32px;
+  padding: 40px;
+  opacity: 80%;
+}
+.width-100 {
+  width: 100%;
+  text-align: center;
+}
+#button-search {
+  color: rgb(37, 36, 36);
+  padding: 10px 20px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #9c5350;
+  font-size: 42px;
+  border-radius: 4px;
+}
+
+#button-search:hover {
+  color: #b4ab98;
+}
+@media screen and (min-width: 601px) {
+  .title {
+    font-size: 100px;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 60px;
+    margin-top: 30%;
+  }
+}
