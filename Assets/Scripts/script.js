@@ -72,7 +72,7 @@ function sendEmail(recipeId, emailAddress) {
   msgEl.text("");
 
   var htmlBody =
-    "<div><img src='Assets/Images/email-header.png'><br><hr><br>" +
+    "<div><img src='https://tajohnsonn.github.io/5StarRecipes/Assets/Images/email-header.png'><br><hr><br>" +
     $("#recipe" + recipeId).html() +
     "</div>";
 
