@@ -115,6 +115,10 @@ function sendEmail(recipeId, emailAddress) {
     });
 
   // Display confirmation on page
+  $("#emailInp").addClass("hideme");
+  $("#emailBtn").addClass("hideme");
+  $("#confirm").removeClass("hideme");
+  $('#confirm').delay(5000).fadeOut('slow');
 }  
 });
 
@@ -220,8 +224,7 @@ function recipePull(q) {
 
       // $("#result").append(recipeDiv + form);
       $("#result").append(recipeDiv);
-
-    
+      $("#result").animate({opacity: "1"}, 2000);
     }
 
     function parseList(foodList, multi, className) {

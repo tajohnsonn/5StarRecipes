@@ -224,6 +224,14 @@ h4 {
 #emailInp {
   max-width: 75%;
 }
+#confirm {
+  border: 1px solid gray;
+  padding: 15px;
+  background-color: lightgoldenrodyellow;
+}
+#result {
+  opacity: 0;
+}
 
 @media screen and (max-width: 500px) {
   .column-right {
