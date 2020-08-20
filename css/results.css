@@ -1,7 +1,12 @@
 /*=========================================
 *            global attributes            *
 =========================================*/
-.dietLabels ul, .dietLabels li, .healthLabels ul, .healthLabels li, .cautions ul, .cautions li {
+.dietLabels ul,
+.dietLabels li,
+.healthLabels ul,
+.healthLabels li,
+.cautions ul,
+.cautions li {
   list-style-type: none;
   margin: 5px 10px;
   font-size: 14px;
@@ -10,15 +15,13 @@
   border: 1px dashed red;
   color: white;
   display: inline-block;
-  
 }
 
-.modal-card .ingredientLines li, .modal-card .ingredientLines ul{
+.modal-card .ingredientLines li,
+.modal-card .ingredientLines ul {
   list-style-type: none;
   margin: 5px 10px;
-
 }
-
 
 *,
 *::after,
@@ -101,7 +104,6 @@ body {
 #historyTitle {
   font-size: 50px;
   color: #974744;
-  
 }
 #detailsTitle {
   font-size: 40px;
@@ -136,6 +138,7 @@ body {
 .input,
 .textarea {
   color: #000;
+  width: 90%;
 }
 .column-left ul {
   max-width: 50%;
@@ -148,7 +151,7 @@ body {
   height: 17px;
 }
 
-.localItem{
+.localItem {
   border: solid black 1px;
   padding: 5px 10px;
   margin: 5px auto;
@@ -174,34 +177,29 @@ body {
 .hideme {
   display: none;
 }
-.recipeCard{
+.recipeCard {
   max-width: 49%;
   display: inline-block;
   min-height: 500px;
   vertical-align: top;
   padding-right: 30px;
-
 }
-.recipeCard h2{
+.recipeCard h2 {
   max-width: 300px;
   text-align: center;
   color: brown;
-  font-size: 35px;}
+  font-size: 35px;
+}
 
-.modal-card-body img{
+.modal-card-body img {
   float: left;
   margin: 0 10px 10px 0;
   border-radius: 25%;
   border: 3px black dotted;
-  
-
 }
 .modal-card {
-  width:80%;
-
+  width: 80%;
 }
-
-
 
 @media screen and (max-width: 600px) {
   .column-right {
