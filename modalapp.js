@@ -1,7 +1,4 @@
-// console.log("ghfvdsobytrfde");
-
 $(document).ready(function () {
-  // var button = $(".recipeCard");
   var contentModal = $("#recipeIngredientCard");
   var closeModalBtn = $(".modal-close");
   $("body").on("click", ".recipeCard", function () {
@@ -35,7 +32,6 @@ $(document).ready(function () {
     var healthLabels = $("#recipe" + id + " .healthLabels").html();
     var cautions = $("#recipe" + id + " .cautions").html();
     var ingredientLines = $("#recipe" + id + " .ingredientLines").html();
-    // var ingredients = $("#recipe" + id + " .ingredients").html();
 
     $("#recipeTitle").text(label);
     $(".modal-card-body img").attr("src", image);
