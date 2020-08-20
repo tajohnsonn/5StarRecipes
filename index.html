@@ -28,7 +28,7 @@
     <div class="background">
       <div class="row">
         <header>
-          <div class="title">5<span class="star">Star</span>Recipes</div>
+          <div id="title" class="title" style="color: black;"></div>
           <input
             type="text"
             id="search-bar"
@@ -46,6 +46,41 @@
     $("#button-search").click(function (event) {
       var search = $("#search-bar").val();
       window.location.href = "results.html?search=" + search;
+    });
+
+    // Text Animation
+    $(document).ready(function () {
+      var index = 0;
+      var text = "5 Star Recipes";
+      var speed = 100;
+
+      typeText();
+
+      // Type text function
+      function typeText() {
+        if (index < text.length) {
+          document.getElementById("title").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeText, speed);
+        }
+      }
+
+      // Change color function
+      var i = 0;
+
+      function changeColor() {
+        //console.log("running colors");
+        // Get Element
+        var title = document.getElementById("title");
+        var colors = ["#000", "#111", "#222", "#333", "#444", "#555", "#666", "#777", "#888", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222", "#111"];
+        $(title).css("color", colors[i]);
+        i++;
+
+        if (i > colors.length - 1) {
+          i = 0;
+        }
+      }
+      setInterval(changeColor, 100);
     });
   </script>
 </html>
