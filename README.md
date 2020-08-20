@@ -19,21 +19,20 @@ I’m stuck in a pandemic and I don’t know what to cook. I need an app that wi
 
 # API's Used:
 
-TheMealDB: https://www.themealdb.com/api.php
-TheCocktailDB: https://www.thecocktaildb.com/api.php
+EmailJS: https://api.emailjs.com/api/v1.0/email/send
+
 EDAMAM: https://developer.edamam.com/edamam-docs-recipe-api
-Tasty API: https://rapidapi.com/apidojo/api/tasty/pricing
-Recipe API: https://rapidapi.com/webknox/api/recipe?endpoint=53aa54e5e4b0a798dbd1a8c2
-MyCookbook: https://rapidapi.com/mycookbook/api/mycookbook-io1/endpoints
 
 # Frameworks Used:
 
 Bulma
+
 Zurb Foundation
 
 # Links to Repo:
 
 User link to App - https://tajohnsonn.github.io/5StarRecipes/
+
 GitHub link to Repo - https://github.com/tajohnsonn/5StarRecipes
 
 # Screenshots:
