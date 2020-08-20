@@ -142,7 +142,7 @@ function localStor(searchTerm) {
   $("#localStorage").html("");
   for (var index = 0; index < localArray.length; index++) {
     var localItem = "<p class = 'localItem'>" + localArray[index] + "</p>";
-    $("#localStorage").append(localItem);
+    $("#localStorage").prepend(localItem);
   }
 }
 
